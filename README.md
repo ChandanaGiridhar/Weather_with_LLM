@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Term-Project
 The code for CS427 Android app.
 <br/>
@@ -246,3 +247,7 @@ Meeting notes: Explain the overall team progress and a summary of discussion
 |                |                                 |                       |
 |                |                                 |                       |
 </br>
+=======
+# Weather_with_LLM
+Android app for weather with LLM functionality
+>>>>>>> b6c1c9aa3fc46fc076ed591722b5b1818d77bcbc

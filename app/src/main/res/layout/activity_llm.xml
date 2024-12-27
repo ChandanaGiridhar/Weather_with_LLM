@@ -1,0 +1,85 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LLMActivity">
+
+    <!-- Chat Display Area -->
+    <ScrollView
+        android:id="@+id/chatScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/question_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/chatContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp" />
+    </ScrollView>
+
+    <!-- Response Text View in the Center -->
+    <TextView
+        android:id="@+id/response_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/chat_bubble"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Retrieving weather data ..."
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Container for Question Buttons -->
+    <LinearLayout
+        android:id="@+id/question_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- First Question Button -->
+        <Button
+            android:id="@+id/button_question_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="QUESTION_FIRST"
+            android:backgroundTint="#6200EE"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:textSize="14sp" />
+
+        <!-- Space Between Buttons -->
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="match_parent" />
+
+        <!-- Second Question Button -->
+        <Button
+            android:id="@+id/button_question_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="QUESTION_SECOND"
+            android:backgroundTint="#6200EE"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
